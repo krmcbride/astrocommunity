@@ -10,12 +10,10 @@ return {
         opts = function(_, opts)
           local maps = opts.mappings
 
-          -- INFO: Default prefix of toggleterm-related actions
-          local prefix = "<Leader>t"
-
-          maps.n[prefix .. "d"] = {
+          -- like <Leader>gg for Lazygit, we'll user <Leader>dd for LazyDocker
+          maps.n["<Leader>dd"] = {
             function() require("lazydocker").open() end,
-            desc = "ToggleTerm LazyDocker",
+            desc = "Toggle LazyDocker",
           }
         end,
       },
